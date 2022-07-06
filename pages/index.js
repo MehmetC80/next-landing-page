@@ -3,6 +3,7 @@ import { Banner } from '../components/Banner';
 import { MeduimCard } from '../components/MediumCard';
 import { Header } from '../components/Header';
 import { SmallCard } from '../components/SmallCard';
+import { LargeCard } from '../components/LargeCard';
 
 export default function Home({ exploreData, cardsData }) {
   return (
@@ -33,13 +34,19 @@ export default function Home({ exploreData, cardsData }) {
           </div>
         </section>
         <sectin>
+          <h2 className='text-4xl font-semibold py-8'>Live Anywere</h2>
           <div className='flex space-x-3 overflow-scroll scrollbar-hide'>
-            <h2 className='text-4xl font-semibold py-8'>Live Anywere</h2>
             {cardsData?.map((item, i) => {
               return <MeduimCard key={i} img={item.img} title={item.title} />;
             })}
           </div>
         </sectin>
+        <LargeCard
+          img='https://links.papareact.com/4cj'
+          title='The Greatest Outdoors'
+          description='Wishes curated by ...'
+          buttonText='Get insired'
+        />
       </main>
     </div>
   );
