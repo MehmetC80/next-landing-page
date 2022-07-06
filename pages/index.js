@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Banner } from '../components/Banner';
 
 import { Header } from '../components/Header';
+import { SmallCard } from '../components/SmallCard';
 
 export default function Home({ exploreData }) {
   return (
@@ -15,11 +16,21 @@ export default function Home({ exploreData }) {
       <Banner />
       <main className='max-w-7xl mx-auto px-8 sm:px-16'>
         <section className='pt-6 '>
-          <h2 className='text-4xl font-semibold pb-5'>Explore Nearby</h2>
+          <h2 className='text-4xl font-semibold pb-5'>My favorite Books</h2>
           {/* pull some data from server - API endpoints*/}
-          {exploreData?.map((item) => {
-            return <h1 className='text-xl'>{item.location}</h1>;
-          })}
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+            {exploreData?.map((item) => {
+              return (
+                <SmallCard
+                  key={item.id}
+                  img={item.img}
+                  title={item.title}
+                  rank={item.rank}
+                  idCode={item.idcode}
+                />
+              );
+            })}
+          </div>
         </section>
       </main>
     </div>
@@ -27,9 +38,9 @@ export default function Home({ exploreData }) {
 }
 
 export async function getStaticProps() {
-  const exploreData = await fetch('http://links.papareact.com/pyp').then(
-    (result) => result.json()
-  );
+  const exploreData = await fetch(
+    'https://edwardtanguay.netlify.app/share/books.json'
+  ).then((result) => result.json());
 
   return {
     props: {

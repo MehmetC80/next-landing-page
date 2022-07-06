@@ -5,4 +5,11 @@ const nextConfig = {
 
 module.exports = {
   nextConfig,
+  images: {
+    domains: [
+      'links.papareact.com',
+      'edwardtanguay.netlify.app/share/books.json',
+      'edwardtanguay.netlify.app',
+    ],
+  },
 };
