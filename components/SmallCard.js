@@ -15,8 +15,8 @@ export const SmallCard = ({ idCode, title, rank }) => {
       </div>
       {/* Right */}
       <div>
-        <h2>{title}</h2>
-        <h3 className='text-gray-500'>{rank}</h3>
+        <h2 className='text-lg font-bold mb-2'>{title}</h2>
+        <h3 className='text-red-800'>Rank: {rank}</h3>
       </div>
     </div>
   );

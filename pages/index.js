@@ -19,7 +19,7 @@ export default function Home({ exploreData, cardsData }) {
         <section className='pt-6 '>
           <h2 className='text-4xl font-semibold pb-5'>My favorite Books</h2>
           {/* pull some data from server - API endpoints*/}
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
             {exploreData?.map((item) => {
               return (
                 <SmallCard
