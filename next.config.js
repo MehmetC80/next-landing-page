@@ -10,6 +10,7 @@ module.exports = {
       'links.papareact.com',
       'edwardtanguay.netlify.app/share/books.json',
       'edwardtanguay.netlify.app',
+      'links.papareact.com/zp1',
     ],
   },
 };
