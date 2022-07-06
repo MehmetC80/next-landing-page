@@ -4,7 +4,7 @@ import { MeduimCard } from '../components/MediumCard';
 import { Header } from '../components/Header';
 import { SmallCard } from '../components/SmallCard';
 import { LargeCard } from '../components/LargeCard';
-
+import { Footer } from '../components/Footer';
 export default function Home({ exploreData, cardsData }) {
   return (
     <div className=''>
@@ -42,12 +42,13 @@ export default function Home({ exploreData, cardsData }) {
           </div>
         </sectin>
         <LargeCard
-          img='https://links.papareact.com/4cj'
-          title='The Greatest Outdoors'
+          img='/images/linux-03.png'
+          title='The Greatest Operating System '
           description='Wishes curated by ...'
           buttonText='Get insired'
         />
       </main>
+      <Footer />
     </div>
   );
 }
